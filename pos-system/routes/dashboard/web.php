@@ -1,13 +1,21 @@
 <?php
-use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\Dashboard\DashboardController;
+use Illuminate\Support\Facades\Route;
 {
-	Route::prefix('dashboard')->name('dashboard.')->group(function () {
-        Route::get('/check',function(){
-            return "This is Dashboard";
-        });
+    // routes/web.php
+
+Route::group(['prefix' => LaravelLocalization::setLocale()], function()
+{
+    Route::prefix('dashboard')->name('dashboard.')->group(function () {
+        Route::get('/index',[DashboardController::class,'index']) -> name('index');
+
+});
+
+/** OTHER PAGES THAT SHOULD NOT BE LOCALIZED **/
+
         // Route::get('/',[WelcomeController::class,'index'])->name('welcome');
-        
+
         //User Routes
         Route::resource('users',UserController::class);
 
