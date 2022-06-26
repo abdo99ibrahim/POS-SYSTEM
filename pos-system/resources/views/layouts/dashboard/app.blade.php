@@ -198,12 +198,11 @@
 
     @include('partials._session')
 
-    <footer class="main-footer">
-        <div class="pull-right hidden-xs">
+    <footer class="main-footer text-center">
+        {{-- <div class="pull-right hidden-xs">
             <b>Version</b> 2.4.0
-        </div>
-        <strong>Copyright &copy; 2014-2016
-            <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
+        </div> --}}
+        <strong>Copyright &copy; 2022-2023 </strong> All rights
         reserved.
     </footer>
 

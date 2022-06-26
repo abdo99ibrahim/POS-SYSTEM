@@ -106,7 +106,7 @@ return [
     'prohibited_unless'    => 'حقل :attribute محظور ما لم يكن :other ضمن :values.',
     'prohibits'            => 'الحقل :attribute يحظر تواجد الحقل :other.',
     'regex'                => 'صيغة حقل :attribute .غير صحيحة.',
-    'required'             => 'حقل :attribute مطلوب.',
+    'required'             => ' :attribute مطلوب.',
     'required_array_keys'  => 'الحقل :attribute يجب أن يحتوي على مدخلات لـ: :values.',
     'required_if'          => 'حقل :attribute مطلوب في حال ما إذا كان :other يساوي :value.',
     'required_unless'      => 'حقل :attribute مطلوب في حال ما لم يكن :other يساوي :values.',
@@ -124,13 +124,15 @@ return [
     'starts_with'          => 'يجب أن يبدأ حقل :attribute بأحد القيم التالية: :values',
     'string'               => 'يجب أن يكون حقل :attribute نصًا.',
     'timezone'             => 'يجب أن يكون حقل :attribute نطاقًا زمنيًا صحيحًا.',
-    'unique'               => 'قيمة حقل :attribute مُستخدمة من قبل.',
+    'unique'               => ' :attribute مُستخدم من قبل.',
     'uploaded'             => 'فشل في تحميل الـ :attribute.',
     'url'                  => 'صيغة رابط حقل :attribute غير صحيحة.',
     'uuid'                 => 'حقل :attribute يجب أن يكون بصيغة UUID سليمة.',
-    'custom'               => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'attributes' => [
+            'first_name' => 'الأسم الأول',
+            'last_name' => 'الأسم الأخير',
+            'email' => 'البريد الإلكتروني',
+            'password' => 'كلمة السر',
+            'password_confirmation' => ' تأكيد كلمة السر',
         ],
-    ],
 ];

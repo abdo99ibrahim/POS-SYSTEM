@@ -6,8 +6,6 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Config;
-use Illuminate\Support\TValue;
-use Illuminate\Support\TGetDefault;
 
 class LaratrustSeeder extends Seeder
 {
@@ -50,9 +48,9 @@ class LaratrustSeeder extends Seeder
                     $permissionValue = $mapPermission->get($perm);
 
                     $permissions[] = \App\Models\Permission::firstOrCreate([
-                        'name' => $module . '_' . $permissionValue,
-                        'display_name' => ucfirst($permissionValue) . ' ' . ucfirst($module),
-                        'description' => ucfirst($permissionValue) . ' ' . ucfirst($module),
+                        'name' => $permissionValue . '_' . $module,
+                        'display_name' => ucfirst($module) . ' ' . ucfirst($permissionValue),
+                        'description' => ucfirst($module) . ' ' . ucfirst($permissionValue),
                     ])->id;
 
                     $this->command->info('Creating Permission to '.$permissionValue.' for '. $module);
@@ -61,6 +59,7 @@ class LaratrustSeeder extends Seeder
 
             // Attach all permissions to the role
             $role->permissions()->sync($permissions);
+            $this->command->info("Creating '{$key}' user");
 
             // if (Config::get('laratrust_seeder.create_users')) {
             //     $this->command->info("Creating '{$key}' user");
