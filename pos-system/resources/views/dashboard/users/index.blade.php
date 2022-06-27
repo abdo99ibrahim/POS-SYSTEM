@@ -23,7 +23,7 @@
                 <form action="{{route('dashboard.users.index')}}" method="get">
                     <div class="row">
                         <div class="col-md-4">
-                            <input type="search" name="search"class="form-control" placeholder="@lang('site.search')">
+                            <input type="search" name="search"class="form-control" placeholder="@lang('site.search')" value="{{request()->search}}">
                         </div>
                         <div class="col-md-4">
                             <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> @lang('site.search')</button>
@@ -57,24 +57,25 @@
                             <td>{{$user->email}}</td>
                             <td>
                                 @if (auth()->user()->hasPermission('update_users'))
-                                <a href="{{route('dashboard.users.edit',$user->id)}}" class="btn btn-info btn-sm">@lang('site.edit')</a>
+                                <a href="{{route('dashboard.users.edit',$user->id)}}" class="btn btn-info btn-sm"><i class="fa fa-edit"></i> @lang('site.edit')</a>
                                 @else
-                                <a href="#" class="btn btn-info btn-sm disabled">@lang('site.edit')</a>
+                                <a href="#" class="btn btn-info btn-sm disabled"><i class="fa fa-edit"></i> @lang('site.edit')</a>
                                 @endif
                                 @if (auth()->user()->hasPermission('delete_users'))
                                 <form action="{{route('dashboard.users.destroy',$user->id)}}" method="post" style="display:inline-block">
                                     {{csrf_field()}}
                                     {{method_field('delete')}}
-                                    <button type="submit" class="btn btn-danger btn-sm">@lang('site.delete')</button>
+                                    <button type="submit" class="btn btn-danger delete btn-sm"><i class="fa fa-trash"></i> @lang('site.delete')</button>
                                 </form>
                                 @else
-                                <button type="submit" class="btn btn-danger btn-sm disabled">@lang('site.delete')</button>
+                                <button type="submit" class="btn btn-danger btn-sm disabled"><i class="fa fa-trash"></i> @lang('site.delete')</button>
                                 @endif
                             </td>
                         </tr>
                         @endforeach
                     </tbody>
                 </table>
+                {{$users->appends(request()->query())->links()}}
                 @else
                 <h2>@lang('site.no_data_found')</h2>
                 @endif
