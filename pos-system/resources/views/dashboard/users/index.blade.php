@@ -20,7 +20,7 @@
                 <h3 class="box-title" style="margin-bottom: 15px">
                     @lang('site.users')
                 </h3>
-                <form action="">
+                <form action="{{route('dashboard.users.index')}}" method="get">
                     <div class="row">
                         <div class="col-md-4">
                             <input type="search" name="search"class="form-control" placeholder="@lang('site.search')">

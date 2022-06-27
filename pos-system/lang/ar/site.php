@@ -8,7 +8,7 @@ return[
     'delete' => 'حذف',
     'search' => 'بحث',
     'create' => 'إضافة',
-    'read' => 'قراءة',
+    'read' => 'عرض',
     'update' => 'تعديل',
 
     'no_data_found' => 'للأسف لا يوجد أي سجلات',
@@ -26,6 +26,7 @@ return[
     'updated_successfully'=> 'تم تحديث البيانات بنجاح ',
     'deleted_successfully'=> 'تم حدف البيانات بنجاح ',
 
-
+    'logout'=>'تسجيل الخروج',
     'permissions' => 'الصلاحيات',
+
 ];
