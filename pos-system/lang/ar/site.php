@@ -22,6 +22,7 @@ return[
     'first_name' => 'الأسم الأول',
     'last_name' => 'الأسم الأخير',
     'email' => 'البريد الإلكتروني',
+    'image' => 'صورة',
     'password' => 'كلمة المرور',
     'password_confirmation' => 'تأكيد كلمة المرور',
     'action' => 'الحدث',
@@ -31,6 +32,8 @@ return[
     'deleted_successfully'=> 'تم حدف البيانات بنجاح ',
 
     'logout'=>'تسجيل الخروج',
+    'login'=>'تسجيل الدخول',
+    'remember_me'=> 'تذاكرني',
     'permissions' => 'الصلاحيات',
 
 ];

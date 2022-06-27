@@ -60,7 +60,7 @@ return [
         'numeric' => 'يجب أن تكون قيمة حقل :attribute مساوية أو أكبر من :value.',
         'string'  => 'يجب أن يكون طول نص حقل :attribute على الأقل :value حروفٍ/حرفًا.',
     ],
-    'image'                => 'يجب أن يكون حقل :attribute صورةً.',
+    'image'                => 'يجب أن يكون الحقل :attribute فقط.',
     'in'                   => 'حقل :attribute غير موجود.',
     'in_array'             => 'حقل :attribute غير موجود في :other.',
     'integer'              => 'يجب أن يكون حقل :attribute عددًا صحيحًا.',
@@ -132,7 +132,9 @@ return [
             'first_name' => 'الأسم الأول',
             'last_name' => 'الأسم الأخير',
             'email' => 'البريد الإلكتروني',
+            'image' => 'صورةً',
             'password' => 'كلمة السر',
+            'permissions' => 'الصلاحيات',
             'password_confirmation' => ' تأكيد كلمة السر',
         ],
 ];
