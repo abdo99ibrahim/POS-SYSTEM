@@ -36,4 +36,9 @@ return[
     'remember_me'=> 'تذاكرني',
     'permissions' => 'الصلاحيات',
 
+
+
+    'categories' => 'الأقسام',
+    'name' => 'الأسم'
+
 ];

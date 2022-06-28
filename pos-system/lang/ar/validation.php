@@ -136,5 +136,8 @@ return [
             'password' => 'كلمة السر',
             'permissions' => 'الصلاحيات',
             'password_confirmation' => ' تأكيد كلمة السر',
+
+
+            'name' => 'الأسم',
         ],
 ];
