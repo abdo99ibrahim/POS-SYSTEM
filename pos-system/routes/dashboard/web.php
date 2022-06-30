@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Dashboard\CategoryController;
 use App\Http\Controllers\Dashboard\DashboardController;
+use App\Http\Controllers\Dashboard\ProductController;
 use App\Http\Controllers\Dashboard\UserController;
 use Illuminate\Support\Facades\Route;
     // routes/web.php
@@ -12,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 
         Route::resource('users',UserController::class)->except(['show']);
         Route::resource('categories',CategoryController::class)->except(['show']);
+        Route::resource('products',ProductController::class)->except(['show']);
 
 /** OTHER PAGES THAT SHOULD NOT BE LOCALIZED **/
 

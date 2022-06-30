@@ -40,12 +40,25 @@ return[
 
     'categories' => 'الأقسام',
     'name' => 'الأسم',
+    'products_count'=> 'عدد المنتجات',
+    'related_products'=> ' المنتجات المرتبطة',
+    'category'=> 'القسم',
 
     'ar' =>[
         'name'=> 'الأسم باللغة العربية',
+        'description'=> 'الوصف باللغة العربية',
     ],
     'en' =>[
         'name'=> 'الأسم باللغة الأنجليزية',
+        'description'=> 'الوصف باللغة الأنجليزية',
     ],
 
+
+    'products' =>'المنتجات',
+    'purchase_price'=> 'سعر الشراء',
+    'sale_price'=> 'سعر البيع',
+    'stock'=> 'المخزن',
+    'description' => 'الوصف',
+    'all_categories'=>'جميع الأقسام',
+    'profit_percent' => 'نسبة الربح',
 ];

@@ -239,6 +239,8 @@
     {{--<!-- AdminLTE App -->--}}
     <script src="{{ asset('dashboard/js/adminlte.min.js') }}"></script>
 
+    <script src="{{ asset('dashboard/plugins/ckeditor/ckeditor.js') }}"></script>
+
 
     <script>
         $(document).ready(function () {
@@ -285,8 +287,8 @@
                 }
             }
 
-        })
-
+        });
+        CKEDITOR.config.language = "{{ app()->getLocale() }}";
     </script>
 </body>
 
