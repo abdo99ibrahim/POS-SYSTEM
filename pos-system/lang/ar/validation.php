@@ -105,7 +105,7 @@ return [
     'prohibited_if'        => 'حقل :attribute محظور إذا كان :other هو :value.',
     'prohibited_unless'    => 'حقل :attribute محظور ما لم يكن :other ضمن :values.',
     'prohibits'            => 'الحقل :attribute يحظر تواجد الحقل :other.',
-    'regex'                => 'صيغة حقل :attribute .غير صحيحة.',
+    'regex'                => 'صيغة إدخال :attribute .غير صحيحة.',
     'required'             => ' :attribute مطلوب.',
     'required_array_keys'  => 'الحقل :attribute يجب أن يحتوي على مدخلات لـ: :values.',
     'required_if'          => 'حقل :attribute مطلوب في حال ما إذا كان :other يساوي :value.',
@@ -138,6 +138,7 @@ return [
             'password_confirmation' => ' تأكيد كلمة السر',
 
 
+
             'name' => 'الأسم',
             'ar' => [
                 'name' => ' الأسم باللغة العربية',
@@ -153,6 +154,9 @@ return [
             'purchase_price' => 'سعر الشراء',
             'sale_price' => 'سعر البيع',
             'stock' => 'المخزن',
+
+            'phone' =>'رقم الموبايل',
+            'address' =>'العنوان',
 
         ],
 ];

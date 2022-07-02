@@ -61,4 +61,8 @@ return[
     'description' => 'الوصف',
     'all_categories'=>'جميع الأقسام',
     'profit_percent' => 'نسبة الربح',
+
+    'clients'=>'العملاء',
+    'phone'=>'رقم الموبايل',
+    'address'=>'العنوان',
 ];

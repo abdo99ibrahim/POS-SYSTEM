@@ -24,6 +24,9 @@
             @if (auth()->user()->hasPermission('read_users'))
             <li><a href="{{ route('dashboard.users.index') }}"><i class="fa fa-users"></i><span>@lang('site.users')</span></a></li>
             @endif
+            @if (auth()->user()->hasPermission('read_clients'))
+            <li><a href="{{ route('dashboard.clients.index') }}"><i class="fa fa-user"></i><span>@lang('site.clients')</span></a></li>
+            @endif
 
             {{--<li class="treeview">--}}
             {{--<a href="#">--}}
