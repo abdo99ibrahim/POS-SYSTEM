@@ -9,7 +9,7 @@
         </h1>
 
         <ol class="breadcrumb">
-            <li><a href="{{ route('dashboard.index') }}"><i class="fa fa-dashboard"></i> @lang('site.dashboard')</a>
+            <li><a href="{{ route('dashboard.welcome') }}"><i class="fa fa-dashboard"></i> @lang('site.dashboard')</a>
             </li>
             <li><a href="{{ route('dashboard.users.index') }}">@lang('site.users')</a></li>
             <li class="ative">@lang('site.add')</li>
@@ -62,7 +62,7 @@
                         <div class="card">
                             <div class="card-header d-flex p-0">
                                 @php
-                                   $models=['users','categories','products'];
+                                   $models=['users','categories','products','clients','orders'];
                                    $maps = ['create','read','update','delete'];
                                 @endphp
                                 <ul class="nav nav-pills ml-auto p-2">
