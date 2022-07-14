@@ -55,5 +55,7 @@ class User extends Authenticatable
     public function getImagePAthAttribute(){
         return asset('uploads/user_images/'.$this->image);
     }
+
+
 }
 

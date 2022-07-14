@@ -42,6 +42,22 @@
         .mr-2 {
             margin-right: 5px;
         }
+        .loader{
+            border:5px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 5px solid #367FA9;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite
+        }
+        @keyframes spin{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg)
+            }
+        }
 
     </style>
     {{--<!-- jQuery 3 -->--}}
@@ -239,6 +255,9 @@
 
     {{--<!-- FastClick -->--}}
     <script src="{{ asset('dashboard_files/js/fastclick.js') }}"></script>
+
+    {{--<!-- Print This -->--}}
+    <script src="{{ asset('dashboard_files/js/printThis.js') }}"></script>
 
     {{--<!-- AdminLTE App -->--}}
     <script src="{{ asset('dashboard_files/js/adminlte.min.js') }}"></script>

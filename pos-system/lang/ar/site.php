@@ -68,9 +68,17 @@ return[
 
     'orders'=>'الطلبات',
     'add_order'=>'أضافة طلب',
+    'edit_order'=>'تعديل طلب',
     'no_records'=>'لا يوجد أي سجلات',
     'price' => 'السعر',
     'product' => 'المنتج',
     'quantity' => 'الكمية',
     'total' => 'المجموع',
+    'client_name' => 'اسم العميل',
+    'show_products' => 'عرض المنتجات',
+    'created_at' => 'تاريخ إضافتة',
+    'show' => 'عرض',
+    'loading' => 'جاري التحميل',
+    'print' => 'طبع',
+    'previous_orders' => 'الطلبات السابقة',
 ];
