@@ -1,6 +1,12 @@
 <?php
 
 return[
+    'pos' => 'مبيعات',
+    'pos_system' => 'نظام نقطة مبيعات',
+    'online' => 'متصل',
+
+
+
     'dashboard' => 'الرئيسية',
 
     'add' => 'أضف',
@@ -81,4 +87,11 @@ return[
     'loading' => 'جاري التحميل',
     'print' => 'طبع',
     'previous_orders' => 'الطلبات السابقة',
+
+    'member_since'=> 'عضو',
+    'sales_graph' => 'إحصائيات المبيعات',
+
+
+    //footer
+    'copyright'=> '2022-2023 جميع الحقوق محفوظة ',
 ];

@@ -136,7 +136,6 @@ return [
     'uploaded' => 'The :attribute failed to upload.',
     'url' => 'The :attribute must be a valid URL.',
     'uuid' => 'The :attribute must be a valid UUID.',
-
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Language Lines
@@ -165,6 +164,36 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'first_name' => 'First Name',
+        'last_name' => 'Last Name',
+        'email' => 'Email',
+        'image' => 'Image',
+        'password' => 'Password',
+        'permissions' => 'Permissions',
+        'password_confirmation' => ' Password Confirmation',
+
+
+
+        'name' => 'Name',
+        'ar' => [
+            'name' => ' Arabic Name',
+            'description' => 'Arabic Description ',
+        ],
+        'en' => [
+            'name' => ' English Name',
+            'description' => 'English Description',
+        ],
+
+
+        'category_id' => 'Category ',
+        'purchase_price' => 'Purchase Price',
+        'sale_price' => 'Sale Price',
+        'stock' => 'Stock',
+
+        'phone' =>'Phone Number',
+        'address' =>'Address',
+
+    ],
 
 ];

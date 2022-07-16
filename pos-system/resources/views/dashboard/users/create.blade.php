@@ -65,7 +65,7 @@
                                    $models=['users','categories','products','clients','orders'];
                                    $maps = ['create','read','update','delete'];
                                 @endphp
-                                <ul class="nav nav-pills ml-auto p-2">
+                                <ul class="nav nav-pills ml-auto p-2" style="margin-bottom: 12px">
                                     @foreach ($models as $index=>$model)
                                     <li class="nav-item {{$index==0 ? 'active': ''}}"><a class="nav-link " href="#{{$model}}"
                                             data-toggle="tab">@lang('site.'.$model)</a></li>
@@ -79,7 +79,7 @@
                                         @foreach ($maps as $map)
                                         <input type="checkbox" name="permissions[]" value="{{$map.'_'.$model}}"
                                             class="form-check-input" id="{{$map}}">
-                                        <label class="form-check-label" for="{{$map}}">@lang('site.' .$map)</label>
+                                        <label class="form-check-label" style="margin-left:5px"for="{{$map}}">@lang('site.' .$map)</label>
                                         @endforeach
                                     </div>
                                     @endforeach

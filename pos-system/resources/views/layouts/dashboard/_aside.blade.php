@@ -8,7 +8,7 @@
             </div>
             <div class="pull-left info">
                 <p>{{auth()->user()->first_name.' '.auth()->user()->last_name}}</p>
-                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                <a href="#"><i class="fa fa-circle text-success"></i> @lang('site.online')</a>
             </div>
         </div>
 

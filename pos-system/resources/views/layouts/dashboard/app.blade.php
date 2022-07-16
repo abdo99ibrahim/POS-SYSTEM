@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 2 | Blank Page</title>
+    <title>Point Of Sales</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
     {{--<!-- Bootstrap 3.3.7 -->--}}
@@ -39,6 +39,8 @@
     @endif
 
     <style>
+        @media(max-width:991px){
+        }
         .mr-2 {
             margin-right: 5px;
         }
@@ -67,6 +69,8 @@
     <link rel="stylesheet" href="{{ asset('dashboard_files/plugins/noty/noty.css') }}">
     <script src="{{ asset('dashboard_files/plugins/noty/noty.min.js') }}"></script>
 
+    <link rel="stylesheet" href="{{ asset('dashboard_files/plugins/morris/morris.css') }}">
+
     {{--<!-- iCheck -->--}}
     <link rel="stylesheet" href="{{ asset('dashboard_files/plugins/icheck/all.css') }}">
 
@@ -89,8 +93,8 @@
             {{--<!-- Logo -->--}}
             <a href="{{ asset('dashboard') }}/index2.html" class="logo">
                 {{--<!-- mini logo for sidebar mini 50x50 pixels -->--}}
-                <span class="logo-mini"><b>P</b>os</span>
-                <span class="logo-lg"><b>Pos </b>Sales</span>
+                <span class="logo-mini">@lang('site.pos')</span>
+                <span class="logo-lg">@lang('site.pos_system')</span>
             </a>
 
             <nav class="navbar navbar-static-top">
@@ -106,7 +110,7 @@
                     <ul class="nav navbar-nav">
 
                         <!-- Messages: style can be found in dropdown.less-->
-                        <li class="dropdown messages-menu">
+                        {{-- <li class="dropdown messages-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="fa fa-envelope-o"></i>
                                 <span class="label label-success">4</span>
@@ -138,10 +142,10 @@
                                     <a href="#">See All Messages</a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> --}}
 
                         {{--<!-- Notifications: style can be found in dropdown.less -->--}}
-                        <li class="dropdown notifications-menu">
+                        {{-- <li class="dropdown notifications-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="fa fa-bell-o"></i>
                                 <span class="label label-warning">10</span>
@@ -149,7 +153,6 @@
                             <ul class="dropdown-menu">
                                 <li class="header">You have 10 notifications</li>
                                 <li>
-                                    {{--<!-- inner menu: contains the actual data -->--}}
                                     <ul class="menu">
                                         <li>
                                             <a href="#">
@@ -162,14 +165,13 @@
                                     <a href="#">View all</a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> --}}
 
                         {{--<!-- Tasks: style can be found in dropdown.less -->--}}
                         <li class="dropdown tasks-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-flag-o"></i></a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    {{--<!-- inner menu: contains the actual data -->--}}
                                     <ul class="menu">
 
                                         @foreach(LaravelLocalization::getSupportedLocales() as $localeCode =>
@@ -205,7 +207,8 @@
 
                                     <p>
                                         {{auth()->user()->first_name.' '.auth()->user()->last_name}}
-                                        <small>Member since 2 days</small>
+
+                                        <small>@lang('site.member_since') {{auth()->user()->created_at->diffForHumans()}}</small>
                                     </p>
                                 </li>
 
@@ -241,8 +244,7 @@
             {{-- <div class="pull-right hidden-xs">
             <b>Version</b> 2.4.0
         </div> --}}
-            <strong>Copyright &copy; 2022-2023 </strong> All rights
-            reserved.
+            <strong>@lang('site.copyright')</strong>
         </footer>
 
     </div><!-- end of wrapper -->
@@ -264,6 +266,9 @@
 
     <script src="{{ asset('dashboard_files/plugins/ckeditor/ckeditor.js') }}"></script>
 
+{{-- morris --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="{{ asset('dashboard_files/plugins/morris/morris.min.js') }}"></script>
 
     <script>
         $(document).ready(function () {
@@ -313,6 +318,7 @@
         });
         CKEDITOR.config.language = "{{ app()->getLocale() }}";
     </script>
+    @stack('scripts')
 </body>
 
 </html>

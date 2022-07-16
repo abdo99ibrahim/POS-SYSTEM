@@ -79,7 +79,7 @@
                                 <tr>
                                     <td>{{ $index + 1 }}</td>
                                     <td>{{ $product->name }}</td>
-                                    <td>{!! $product->description !!}</td>
+                                    <td>{!! Str::limit($product->description,100) !!}</td>
                                     <td>{{ $product->category->name }}</td>
                                     <td><img src="{{ $product->image_path }}" style="width: 100px"  class="img-thumbnail" alt=""></td>
                                     <td>{{ $product->purchase_price }}</td>
@@ -88,7 +88,7 @@
                                     <td>{{ $product->stock }}</td>
                                     <td>
                                         @if (auth()->user()->hasPermission('update_products'))
-                                            <a href="{{ route('dashboard.products.edit', $product->id) }}" class="btn btn-info btn-sm"><i class="fa fa-edit"></i> @lang('site.edit')</a>
+                                            <a href="{{ route('dashboard.products.edit', $product->id) }}" class="btn btn-info btn-sm text"><i class="fa fa-edit"></i> @lang('site.edit')</a>
                                         @else
                                             <a href="#" class="btn btn-info btn-sm disabled"><i class="fa fa-edit"></i> @lang('site.edit')</a>
                                         @endif
@@ -96,7 +96,7 @@
                                             <form action="{{ route('dashboard.products.destroy', $product->id) }}" method="post" style="display: inline-block">
                                                 {{ csrf_field() }}
                                                 {{ method_field('delete') }}
-                                                <button type="submit" class="btn btn-danger delete btn-sm"><i class="fa fa-trash"></i> @lang('site.delete')</button>
+                                                <button type="submit" class="btn btn-danger delete btn-sm text"><i class="fa fa-trash"></i> @lang('site.delete')</button>
                                             </form><!-- end of form -->
                                         @else
                                             <button class="btn btn-danger btn-sm disabled"><i class="fa fa-trash"></i> @lang('site.delete')</button>
